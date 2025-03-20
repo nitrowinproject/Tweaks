@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
-      - name: Run merge.sh
+      - name: Run merge.ps1
         run: ./merge.ps1
       - name: Commit and Push Changes
         run: |
