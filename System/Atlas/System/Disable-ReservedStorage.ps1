@@ -1,0 +1,1 @@
+Start-Process -Wait -NoNewWindow -FilePath "dism.exe" -ArgumentList "/Online /Set-ReservedStorageState /State:Disabled"
