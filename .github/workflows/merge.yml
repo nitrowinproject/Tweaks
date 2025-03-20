@@ -7,10 +7,10 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
+      - name: Make merge.sh executable
+        run: chmod +x merge.sh
       - name: Run merge.sh
-        run: |
-          chmod +x merge.sh
-          ./merge.sh
+        run: ./merge.sh
       - name: Commit and Push Changes
         run: |
           git config --global user.name "github-actions[bot]"
