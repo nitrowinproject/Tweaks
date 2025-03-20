@@ -1,18 +1,12 @@
 $mergedRegistryUserFile = "NitroWin.Tweaks.User.reg"
-$mergedBatchUserFile = "NitroWin.Tweaks.User.bat"
 $mergedPowerShellUserFile = "NitroWin.Tweaks.User.ps1"
 
 $mergedRegistrySystemFile = "NitroWin.Tweaks.System.reg"
-$mergedBatchSystemFile = "NitroWin.Tweaks.System.bat"
 $mergedPowerShellSystemFile = "NitroWin.Tweaks.System.ps1"
 
 
 if (Test-Path $mergedRegistryUserFile) {
     Remove-Item $mergedRegistryUserFile
-}
-
-if (Test-Path $mergedBatchUserFile) {
-    Remove-Item $mergedBatchUserFile
 }
 
 if (Test-Path $mergedPowerShellUserFile) {
@@ -24,21 +18,15 @@ if (Test-Path $mergedRegistrySystemFile) {
     Remove-Item $mergedRegistrySystemFile
 }
 
-if (Test-Path $mergedBatchSystemFile) {
-    Remove-Item $mergedBatchSystemFile
-}
-
 if (Test-Path $mergedPowerShellSystemFile) {
     Remove-Item $mergedPowerShellSystemFile
 }
 
 
 $registryTweakUserFiles = Get-ChildItem -Path "User" -Filter "*.reg" -Recurse
-$batchTweakUserFiles = Get-ChildItem -Path "User" -Filter "*.bat" -Recurse
 $powershellTweakUserFiles = Get-ChildItem -Path "User" -Filter "*.ps1" -Recurse
 
 $registryTweakSystemFiles = Get-ChildItem -Path "System" -Filter "*.reg" -Recurse
-$batchTweakSystemFiles = Get-ChildItem -Path "System" -Filter "*.bat" -Recurse
 $powershellTweakSystemFiles = Get-ChildItem -Path "System" -Filter "*.ps1" -Recurse
 
 
@@ -47,11 +35,6 @@ Add-Content -Path $mergedRegistryUserFile -Value "Windows Registry Editor Versio
 foreach ($file in $registryTweakUserFiles) {
     $content = Get-Content $file.FullName
     Add-Content -Path $mergedRegistryUserFile -Value ($content | Select-Object -Skip 1)
-}
-
-foreach ($file in $batchTweakUserFiles) {
-    $content = Get-Content $file.FullName
-    Add-Content -Path $mergedBatchUserFile -Value $content
 }
 
 foreach ($file in $powershellTweakUserFiles) {
@@ -64,11 +47,6 @@ Add-Content -Path $mergedRegistrySystemFile -Value "Windows Registry Editor Vers
 foreach ($file in $registryTweakSystemFiles) {
     $content = Get-Content $file.FullName
     Add-Content -Path $mergedRegistrySystemFile -Value ($content | Select-Object -Skip 1)
-}
-
-foreach ($file in $batchTweakSystemFiles) {
-    $content = Get-Content $file.FullName
-    Add-Content -Path $mergedBatchSystemFile -Value $content
 }
 
 foreach ($file in $powershellTweakSystemFiles) {
