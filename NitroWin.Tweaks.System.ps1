@@ -21,9 +21,8 @@ Start-Process -Wait -NoNewWindow -FilePath "fsutil.exe" -ArgumentList "behavior 
 Start-Process -Wait -NoNewWindow -FilePath "powercfg.exe" -ArgumentList "/duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61"
 Disable-WindowsOptionalFeature -FeatureName WorkFolders-Client -NoRestart -Online
 Disable-WindowsOptionalFeature -FeatureName Printing-PrintToPDFServices-Features -NoRestart -Online
-# The base idea of this tweak comes from Atlas, but I modified it to give me more local time servers.
-
-$region = ((Get-WinSystemLocale).Name).Split("-")[1].ToLower()
+$response = Invoke-RestMethod -Uri "https://ipinfo.io/json"
+$region = $response.country.ToLower()
 
 $servers = "0.$region.pool.ntp.org 1.$region.pool.ntp.org 2.$region.pool.ntp.org 3.$region.pool.ntp.org"
 
