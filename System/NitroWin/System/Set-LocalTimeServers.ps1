@@ -1,6 +1,5 @@
-# The base idea of this tweak comes from Atlas, but I modified it to give me more local time servers.
-
-$region = ((Get-WinSystemLocale).Name).Split("-")[1].ToLower()
+$response = Invoke-RestMethod -Uri "https://ipinfo.io/json"
+$region = $response.country.ToLower()
 
 $servers = "0.$region.pool.ntp.org 1.$region.pool.ntp.org 2.$region.pool.ntp.org 3.$region.pool.ntp.org"
 
