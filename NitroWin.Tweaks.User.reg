@@ -254,35 +254,5 @@ urrentVersion\Privacy]
 [HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Search]
 "SearchboxTaskbarMode"=dword:00000000
 
-[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\ClassicStartMenu]
-"{5399e694-6ce5-4d6c-8fce-1d8870fdcba0}"=dword:00000001
-"{b4bfcc3a-db2c-424c-b029-7fe99a87c641}"=dword:00000001
-"{a8cdff1c-4878-43be-b5fd-f8091c1c60d0}"=dword:00000001
-"{374de290-123f-4565-9164-39c4925e467b}"=dword:00000001
-"{e88865ea-0e1c-4e20-9aa6-edcd0212c87c}"=dword:00000001
-"{f874310e-b6b7-47dc-bc84-b9e6b38f5903}"=dword:00000001
-"{1cf1260c-4dd0-4ebb-811f-33c572699fde}"=dword:00000001
-"{f02c1a0d-be21-4350-88b0-7367fc96ef3c}"=dword:00000001
-"{3add1653-eb32-4cb0-bbd7-dfa0abb5acca}"=dword:00000001
-"{645ff040-5081-101b-9f08-00aa002f954e}"=dword:00000001
-"{20d04fe0-3aea-1069-a2d8-08002b30309d}"=dword:00000001
-"{59031a47-3f72-44a7-89c5-5595fe6b30ee}"=dword:00000001
-"{a0953c92-50dc-43bf-be83-3742fed03c9c}"=dword:00000001
-
-[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel]
-"{5399e694-6ce5-4d6c-8fce-1d8870fdcba0}"=dword:00000001
-"{b4bfcc3a-db2c-424c-b029-7fe99a87c641}"=dword:00000001
-"{a8cdff1c-4878-43be-b5fd-f8091c1c60d0}"=dword:00000001
-"{374de290-123f-4565-9164-39c4925e467b}"=dword:00000001
-"{e88865ea-0e1c-4e20-9aa6-edcd0212c87c}"=dword:00000001
-"{f874310e-b6b7-47dc-bc84-b9e6b38f5903}"=dword:00000001
-"{1cf1260c-4dd0-4ebb-811f-33c572699fde}"=dword:00000001
-"{f02c1a0d-be21-4350-88b0-7367fc96ef3c}"=dword:00000001
-"{3add1653-eb32-4cb0-bbd7-dfa0abb5acca}"=dword:00000001
-"{645ff040-5081-101b-9f08-00aa002f954e}"=dword:00000001
-"{20d04fe0-3aea-1069-a2d8-08002b30309d}"=dword:00000001
-"{59031a47-3f72-44a7-89c5-5595fe6b30ee}"=dword:00000001
-"{a0953c92-50dc-43bf-be83-3742fed03c9c}"=dword:00000001
-
 [HKEY_CURRENT_USER\Control Panel\Accessibility\StickyKeys]
 "Flags"=dword:0000003a
