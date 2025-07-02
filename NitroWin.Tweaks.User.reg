@@ -254,5 +254,8 @@ urrentVersion\Privacy]
 [HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Search]
 "SearchboxTaskbarMode"=dword:00000000
 
+[HKEY_CURRENT_USER\Control Panel\Keyboard]
+"PrintScreenKeyForSnippingEnabled"=dword:00000000
+
 [HKEY_CURRENT_USER\Control Panel\Accessibility\StickyKeys]
 "Flags"=dword:0000003a
