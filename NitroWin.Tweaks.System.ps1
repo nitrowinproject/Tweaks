@@ -3,7 +3,8 @@ Write-Host "Removing Copilot..." -ForegroundColor DarkGray
 try {
     Get-AppxPackage -AllUsers Microsoft.Copilot* | Remove-AppxPackage -AllUsers
     Write-Host "Copilot has been removed successfully!" -ForegroundColor Green
-} catch {
+}
+catch {
     Write-Host "Failed to remove Copilot: $_" -ForegroundColor Red
 }
 Write-Host "Disabling DiagTrack..." -ForegroundColor DarkGray
@@ -15,7 +16,8 @@ try {
     Set-Service -Name "DiagTrack" -StartupType Disabled
 
     Write-Host "DiagTrack has been disabled successfully!" -ForegroundColor Green
-} catch {
+}
+catch {
     Write-Host "Failed to disable DiagTrack service: $_" -ForegroundColor Red
 }
 
@@ -31,7 +33,8 @@ foreach ($path in $paths) {
         Write-Host "Removing logs from: $path..."
         Remove-Item -Path $path -Force
         Write-Host "Removed logs from: $path!" -ForegroundColor Green
-    } catch {
+    }
+    catch {
         Write-Host "Failed to remove logs from: $path`: $_" -ForegroundColor Red
     }
 }
@@ -40,7 +43,8 @@ Write-Host "Disabling feedback..." -ForegroundColor DarkGray
 try {
     Remove-ItemProperty -Path "HKCU:\SOFTWARE\Microsoft\Siuf\Rules" -Name "PeriodInNanoSeconds" -Force
     Write-Host "Feedback has been disabled successfully!" -ForegroundColor Green
-} catch {
+}
+catch {
     Write-Host "Failed to disable feedback: $_" -ForegroundColor Red
 }
 Write-Host "Disabling Remote Assistance..." -ForegroundColor DarkGray
@@ -64,7 +68,8 @@ foreach ($task in $tasks) {
         Write-Host "Disabling scheduled task: $taskName..."
         Get-ScheduledTask -TaskName $taskName -TaskPath $taskPath | Disable-ScheduledTask
         Write-Host "Disabled scheduled task successfully: $taskName!" -ForegroundColor Green
-    } catch {
+    }
+    catch {
         Write-Host "Failed to disable scheduled task: $taskName! Error: $_" -ForegroundColor Red
     }
 }
@@ -72,7 +77,8 @@ try {
     Write-Host "Disabling usage data reporting..."
     Remove-ItemProperty -Path "HKLM:\System\CurrentControlSet\Control\Ubpm" -Name "CriticalMaintenance_UsageDataReporting" -Force
     Write-Host "Usage data reporting has been disabled successfully!" -ForegroundColor Green
-} catch {
+}
+catch {
     Write-Host "Failed to remove registry key: $_" -ForegroundColor Red
 }
 Write-Host "Disabling sleep study..." -ForegroundColor DarkGray
@@ -81,7 +87,8 @@ try {
     Write-Host "Disabling sleep study scheduled tasks..."
     Get-ScheduledTask -TaskName "SleepStudy" -TaskPath "\Microsoft\Windows\Power Efficiency Diagnostics\" | Disable-ScheduledTask
     Write-Host "Disabled sleep study scheduled tasks successfully!" -ForegroundColor Green
-} catch {
+}
+catch {
     Write-Host "Failed to disable sleep study scheduled tasks: $_" -ForegroundColor Red
 }
 
@@ -97,7 +104,8 @@ foreach ($log in $wevArgs) {
         Write-Host "Disabling event log: $log..."
         Start-Process -Wait -NoNewWindow -FilePath "wevtutil" -ArgumentList "set-log `"$log`" /e:false"
         Write-Host "Disabled event log successfully: $log!" -ForegroundColor Green
-    } catch {
+    }
+    catch {
         Write-Host "Failed to disable event log: $log! Error: $_" -ForegroundColor Red
     }
 }
@@ -105,7 +113,7 @@ Write-Host "Optimizing NTFS options..." -ForegroundColor DarkGray
 
 Start-Process -Wait -NoNewWindow -FilePath "fsutil.exe" -ArgumentList "behavior set disablelastaccess 1"
 Start-Process -Wait -NoNewWindow -FilePath "fsutil.exe" -ArgumentList "behavior set disable8dot3 1"
-Write-Host "Disabling telemetry for various applications..."
+Write-Host "Disabling telemetry for various applications..." -ForegroundColor DarkGray
 
 $variables = @(
     "DOTNET_CLI_TELEMETRY_OPTOUT",
@@ -122,14 +130,15 @@ foreach ($var in $variables) {
         catch {
             Write-Host "Failed to set $var`: $_" -ForegroundColor Red
         }
-    } else {
+    }
+    else {
         Write-Host "$var is already set to 1" -ForegroundColor Yellow
     }
 }
-Write-Host "Adding Ultimate Power Plan..."
+Write-Host "Adding Ultimate Power Plan..." -ForegroundColor DarkGray
 
 Start-Process -Wait -NoNewWindow -FilePath "powercfg.exe" -ArgumentList "/duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61"
-Write-Host "Disabling unused Windows features..."
+Write-Host "Disabling unused Windows features..." -ForegroundColor DarkGray
 
 $features = @(
     "WorkFolders-Client",
@@ -146,7 +155,7 @@ foreach ($feature in $features) {
         Write-Host "Failed to disable feature '$feature': $_" -ForegroundColor Red
     }
 }
-Write-Host "Setting local time servers..."
+Write-Host "Setting local time servers..." -ForegroundColor DarkGray
 
 try {
     Write-Host "Detecting region..."
