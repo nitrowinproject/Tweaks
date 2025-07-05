@@ -5,7 +5,7 @@ try {
 
     Stop-Service -Name "DiagTrack" -Force -ErrorAction SilentlyContinue
     Set-Service -Name "DiagTrack" -StartupType Disabled
-    
+
     Write-Host "DiagTrack has been disabled successfully!" -ForegroundColor Green
 } catch {
     Write-Host "Failed to disable DiagTrack service: $_" -ForegroundColor Red
