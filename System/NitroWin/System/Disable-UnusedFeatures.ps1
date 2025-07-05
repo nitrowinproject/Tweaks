@@ -1,4 +1,4 @@
-Write-Host "Disabling unused Windows features..."
+Write-Host "Disabling unused Windows features..." -ForegroundColor DarkGray
 
 $features = @(
     "WorkFolders-Client",
