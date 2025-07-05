@@ -12,6 +12,7 @@ try {
     Remove-Item -Path "HKCU:\Software\Classes\CLSID\{645FF040-5081-101B-9F08-00AA002F954E}" -Recurse
 
     Write-Host "Recycle Bin has been added to Home!" -ForegroundColor Green
-} catch {
+}
+catch {
     Write-Host "Failed to add Recycle Bin to Home: $_" -ForegroundColor Red
 }

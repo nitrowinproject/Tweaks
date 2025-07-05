@@ -1,4 +1,4 @@
-Write-Host "Setting local time servers..."
+Write-Host "Setting local time servers..." -ForegroundColor DarkGray
 
 try {
     Write-Host "Detecting region..."

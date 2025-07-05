@@ -7,7 +7,8 @@ try {
     Set-Service -Name "DiagTrack" -StartupType Disabled
 
     Write-Host "DiagTrack has been disabled successfully!" -ForegroundColor Green
-} catch {
+}
+catch {
     Write-Host "Failed to disable DiagTrack service: $_" -ForegroundColor Red
 }
 
@@ -23,7 +24,8 @@ foreach ($path in $paths) {
         Write-Host "Removing logs from: $path..."
         Remove-Item -Path $path -Force
         Write-Host "Removed logs from: $path!" -ForegroundColor Green
-    } catch {
+    }
+    catch {
         Write-Host "Failed to remove logs from: $path`: $_" -ForegroundColor Red
     }
 }

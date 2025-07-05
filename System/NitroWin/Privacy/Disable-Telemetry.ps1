@@ -1,4 +1,4 @@
-Write-Host "Disabling telemetry for various applications..."
+Write-Host "Disabling telemetry for various applications..." -ForegroundColor DarkGray
 
 $variables = @(
     "DOTNET_CLI_TELEMETRY_OPTOUT",
@@ -15,7 +15,8 @@ foreach ($var in $variables) {
         catch {
             Write-Host "Failed to set $var`: $_" -ForegroundColor Red
         }
-    } else {
+    }
+    else {
         Write-Host "$var is already set to 1" -ForegroundColor Yellow
     }
 }
