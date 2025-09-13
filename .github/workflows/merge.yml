@@ -1,6 +1,9 @@
 name: Merge Tweaks
 run-name: Merge Tweaks
-on: [push]
+on:
+  push:
+    branches:
+      - main
 jobs:
   Merge-Tweaks:
     runs-on: windows-latest
@@ -14,6 +17,5 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add .
-          git commit -m "Automated commit: Added generated files" || echo "No changes to commit"
+          git commit -m "Add merged tweak files" || echo "No changes to commit"
           git push
-
