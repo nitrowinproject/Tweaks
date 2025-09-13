@@ -1,7 +1,7 @@
 Write-Host "Disabling telemetry for various applications..." -ForegroundColor DarkGray
 
 $variables = @(
-    "DOTNET_CLI_TELEMETRY_OPTOUT",
+    "DOTNET_CLI_TELEMETRY_OPTOUT"
     "POWERSHELL_TELEMETRY_OPTOUT"
 )
 

@@ -12,21 +12,21 @@ class mergedFile {
 
 $mergedFiles = @(
     [mergedFile]::new(@{
-        name = "NitroWin.Tweaks.User.reg"
-        contentPaths = (Get-ChildItem -Path "User" -Filter "*.reg" -Recurse)
-    })
+            name         = "NitroWin.Tweaks.User.reg"
+            contentPaths = (Get-ChildItem -Path "User" -Filter "*.reg" -Recurse)
+        })
     [mergedFile]::new(@{
-        name = "NitroWin.Tweaks.User.ps1"
-        contentPaths = (Get-ChildItem -Path "User" -Filter "*.ps1" -Recurse)
-    })
+            name         = "NitroWin.Tweaks.User.ps1"
+            contentPaths = (Get-ChildItem -Path "User" -Filter "*.ps1" -Recurse)
+        })
     [mergedFile]::new(@{
-        name = "NitroWin.Tweaks.System.reg"
-        contentPaths = (Get-ChildItem -Path "System" -Filter "*.reg" -Recurse)
-    })
+            name         = "NitroWin.Tweaks.System.reg"
+            contentPaths = (Get-ChildItem -Path "System" -Filter "*.reg" -Recurse)
+        })
     [mergedFile]::new(@{
-        name = "NitroWin.Tweaks.System.ps1"
-        contentPaths = (Get-ChildItem -Path "System" -Filter "*.ps1" -Recurse)
-    })
+            name         = "NitroWin.Tweaks.System.ps1"
+            contentPaths = (Get-ChildItem -Path "System" -Filter "*.ps1" -Recurse)
+        })
 )
 
 foreach ($file in $mergedFiles) {

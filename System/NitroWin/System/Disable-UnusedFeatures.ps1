@@ -1,7 +1,7 @@
 Write-Host "Disabling unused Windows features..." -ForegroundColor DarkGray
 
 $features = @(
-    "WorkFolders-Client",
+    "WorkFolders-Client"
     "Printing-PrintToPDFServices-Features"
 )
 

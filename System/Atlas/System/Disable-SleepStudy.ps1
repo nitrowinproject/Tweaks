@@ -10,9 +10,9 @@ catch {
 }
 
 $wevArgs = @(
-    "Microsoft-Windows-SleepStudy/Operational",
-    "Microsoft-Windows-SleepStudy/Diagnostic",
-    "Microsoft-Windows-Kernel-Processor-Power/Diagnostic",
+    "Microsoft-Windows-SleepStudy/Operational"
+    "Microsoft-Windows-SleepStudy/Diagnostic"
+    "Microsoft-Windows-Kernel-Processor-PowerDiagnostic"
     "Microsoft-Windows-UserModePowerService/Diagnostic"
 )
 

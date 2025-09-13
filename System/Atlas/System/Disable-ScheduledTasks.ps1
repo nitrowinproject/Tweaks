@@ -1,8 +1,8 @@
 Write-Host "Disabling privacy-compromising scheduled tasks..." -ForegroundColor DarkGray
 
 $tasks = @(
-    @("PcaPatchDbTask", "\Microsoft\Windows\Application Experience\"),
-    @("UCPD velocity", "\Microsoft\Windows\AppxDeploymentClient\"),
+    @("PcaPatchDbTask", "\Microsoft\Windows\Application Experience\")
+    @("UCPD velocity", "\Microsoft\Windows\AppxDeploymentClient\")
     @("UsageDataReporting", "\Microsoft\Windows\Flighting\FeatureConfig\")
 )
 
