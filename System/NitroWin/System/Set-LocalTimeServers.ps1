@@ -15,7 +15,7 @@ catch {
 
 if ((Get-Service -Name "w32time").Status -ne 'Running') {
     try {
-        Write-Debug "Starting Windows Time service..."
+        Write-Host "Starting Windows Time service..."
         Start-Service -Name "w32time"
         Write-Host "Started Windows Time service!" -ForegroundColor Green
     }
@@ -23,7 +23,6 @@ if ((Get-Service -Name "w32time").Status -ne 'Running') {
         Write-Host "Failed to start Windows Time service: $_" -ForegroundColor Red
     }
 }
-
 
 Write-Host "Setting time servers to: $servers..."
 Start-Process -Wait -NoNewWindow -FilePath "w32tm.exe" -ArgumentList "/config /update /syncfromflags:manual /manualpeerlist:`"$servers`""
