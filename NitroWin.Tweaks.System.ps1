@@ -56,8 +56,8 @@ Start-Process -Wait -NoNewWindow -FilePath "dism.exe" -ArgumentList "/Online /Se
 Write-Host "Disabling privacy-compromising scheduled tasks..." -ForegroundColor DarkGray
 
 $tasks = @(
-    @("PcaPatchDbTask", "\Microsoft\Windows\Application Experience\"),
-    @("UCPD velocity", "\Microsoft\Windows\AppxDeploymentClient\"),
+    @("PcaPatchDbTask", "\Microsoft\Windows\Application Experience\")
+    @("UCPD velocity", "\Microsoft\Windows\AppxDeploymentClient\")
     @("UsageDataReporting", "\Microsoft\Windows\Flighting\FeatureConfig\")
 )
 
@@ -93,9 +93,9 @@ catch {
 }
 
 $wevArgs = @(
-    "Microsoft-Windows-SleepStudy/Operational",
-    "Microsoft-Windows-SleepStudy/Diagnostic",
-    "Microsoft-Windows-Kernel-Processor-Power/Diagnostic",
+    "Microsoft-Windows-SleepStudy/Operational"
+    "Microsoft-Windows-SleepStudy/Diagnostic"
+    "Microsoft-Windows-Kernel-Processor-PowerDiagnostic"
     "Microsoft-Windows-UserModePowerService/Diagnostic"
 )
 
@@ -116,7 +116,7 @@ Start-Process -Wait -NoNewWindow -FilePath "fsutil.exe" -ArgumentList "behavior 
 Write-Host "Disabling telemetry for various applications..." -ForegroundColor DarkGray
 
 $variables = @(
-    "DOTNET_CLI_TELEMETRY_OPTOUT",
+    "DOTNET_CLI_TELEMETRY_OPTOUT"
     "POWERSHELL_TELEMETRY_OPTOUT"
 )
 
@@ -137,11 +137,20 @@ foreach ($var in $variables) {
 }
 Write-Host "Adding Ultimate Power Plan..." -ForegroundColor DarkGray
 
-Start-Process -Wait -NoNewWindow -FilePath "powercfg.exe" -ArgumentList "/duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61"
+$keywords = @("Enterprise", "Workstation")
+$regex = [string]::Join("|", $keywords)
+
+if (-Not (Get-WindowsEdition -Online).Edition -match $regex) {
+    Start-Process -Wait -NoNewWindow -FilePath "powercfg.exe" -ArgumentList "/duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61"
+    Write-Host "Added Ultimate Power Plan!" -ForegroundColor Green
+}
+else {
+    Write-Host "Not adding Ultimate Power Plan because it's already installed..."
+}
 Write-Host "Disabling unused Windows features..." -ForegroundColor DarkGray
 
 $features = @(
-    "WorkFolders-Client",
+    "WorkFolders-Client"
     "Printing-PrintToPDFServices-Features"
 )
 
@@ -172,7 +181,7 @@ catch {
 
 if ((Get-Service -Name "w32time").Status -ne 'Running') {
     try {
-        Write-Debug "Starting Windows Time service..."
+        Write-Host "Starting Windows Time service..."
         Start-Service -Name "w32time"
         Write-Host "Started Windows Time service!" -ForegroundColor Green
     }
@@ -180,7 +189,6 @@ if ((Get-Service -Name "w32time").Status -ne 'Running') {
         Write-Host "Failed to start Windows Time service: $_" -ForegroundColor Red
     }
 }
-
 
 Write-Host "Setting time servers to: $servers..."
 Start-Process -Wait -NoNewWindow -FilePath "w32tm.exe" -ArgumentList "/config /update /syncfromflags:manual /manualpeerlist:`"$servers`""
