@@ -1,21 +1,18 @@
-name: Merge Tweaks
-run-name: Merge Tweaks
-on:
-  push:
-    branches:
-      - main
+name: Generate tweaks
+run-name: Generate tweaks
+on: push
 jobs:
   Merge-Tweaks:
     runs-on: windows-latest
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
-      - name: Run merge.ps1
-        run: ./merge.ps1
+      - name: Generate tweak files
+        run: ./Scripts/generate_tweaks.ps1
       - name: Commit and Push Changes
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add .
-          git commit -m "Add merged tweak files" || echo "No changes to commit"
+          git add --force .
+          git commit -m "Add generated tweak files" || echo "No changes to commit"
           git push
