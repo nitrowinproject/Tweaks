@@ -1,0 +1,9 @@
+---
+title: Restrict Anonymous Enumeration of Shares
+description: Restricts anonymous enumeration of shares
+actions:
+  - !registryValue:
+    path: 'HKLM\SYSTEM\CurrentControlSet\Control\Lsa'
+    value: "RestrictAnonymous"
+    data: "1"
+    type: REG_DWORD

@@ -1,0 +1,9 @@
+---
+title: Disable Wait for Idle State
+description: Disables waiting for idle state to improve application startup times
+actions:
+  - !registryValue:
+    path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Serialize'
+    value: "WaitForIdleState"
+    data: "0"
+    type: REG_DWORD

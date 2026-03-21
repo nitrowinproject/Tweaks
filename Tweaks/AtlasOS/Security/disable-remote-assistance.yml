@@ -1,0 +1,19 @@
+---
+title: Disable Remote Assistance
+description: Disables Remote Assistance, as it is an unused and a potentially vulnerable feature
+actions:
+  - !registryValue:
+    path: 'HKLM\SYSTEM\CurrentControlSet\Control\Remote Assistance'
+    value: "fAllowFullControl"
+    data: "0"
+    type: REG_DWORD
+
+  - !registryValue:
+    path: 'HKLM\SYSTEM\CurrentControlSet\Control\Remote Assistance'
+    value: "fAllowToGetHelp"
+    data: "0"
+    type: REG_DWORD
+
+  - !run:
+    exe: "netsh"
+    args: 'advfirewall firewall set rule group="Remote Assistance" new enable=no'

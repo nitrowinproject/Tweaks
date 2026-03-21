@@ -1,0 +1,9 @@
+---
+title: Configure Automatic Maintenance
+description: Configure the 'Automatic Maintenance' feature in Windows
+actions:
+  - !registryValue:
+    path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\Task Scheduler\Maintenance'
+    value: "WakeUp"
+    data: "0"
+    type: REG_DWORD

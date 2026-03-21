@@ -1,0 +1,9 @@
+---
+title: Configure Explorer to Show File Extensions
+description: Configures Explorer to show file extensions for QoL and also security
+actions:
+  - !registryValue:
+    path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced'
+    value: "HideFileExt"
+    data: "0"
+    type: REG_DWORD

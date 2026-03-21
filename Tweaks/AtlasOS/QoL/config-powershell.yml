@@ -1,0 +1,13 @@
+---
+title: Configure PowerShell
+description: Configures PowerShell for the optimal privacy and usability
+actions:
+  - !run:
+    exe: "setx.exe"
+    args: "/M POWERSHELL_TELEMETRY_OPTOUT 1"
+
+  - !registryValue:
+    path: 'HKLM\SOFTWARE\Microsoft\PowerShell\1\ShellIds\Microsoft.PowerShell'
+    value: "ExecutionPolicy"
+    data: "RemoteSigned"
+    type: REG_SZ

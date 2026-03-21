@@ -1,0 +1,7 @@
+---
+title: Disable .NET CLI Telemetry
+description: Disables .NET CLI telemetry for privacy
+actions:
+  - !run:
+    exe: "setx.exe"
+    args: "/M DOTNET_CLI_TELEMETRY_OPTOUT 1"

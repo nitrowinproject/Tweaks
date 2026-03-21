@@ -1,0 +1,9 @@
+---
+title: Disable SMB Bandwidth Throttling
+description: Disables SMB bandwidth throttling for improved performance
+actions:
+  - !registryValue:
+    path: 'HKLM\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters'
+    value: "DisableBandwidthThrottling"
+    data: "1"
+    type: REG_DWORD
