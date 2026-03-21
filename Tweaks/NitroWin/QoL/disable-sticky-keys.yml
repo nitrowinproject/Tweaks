@@ -1,5 +1,5 @@
 ---
-name: Disable Sticky Keys
+title: Disable Sticky Keys
 description: Disables Sticky Keys for QoL
 actions:
   - !registryValue:

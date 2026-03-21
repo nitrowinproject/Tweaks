@@ -1,5 +1,5 @@
 ---
-name: Add Ultimate Power Plan
+title: Add Ultimate Power Plan
 description: Adds the Ultimate Power Plan if not already installed
 actions:
   - !powerShell:

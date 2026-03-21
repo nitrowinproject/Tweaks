@@ -1,5 +1,5 @@
 ---
-name: Disable Unused Features
+title: Disable Unused Features
 description: Disables unused features that not a lof of people use
 actions:
   - !powerShell:

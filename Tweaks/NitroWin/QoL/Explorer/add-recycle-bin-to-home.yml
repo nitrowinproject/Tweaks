@@ -1,5 +1,5 @@
 ---
-name: Add Recycle Bin to Home
+title: Add Recycle Bin to Home
 description: Adds Recycle Bin to Home in Explorer for QoL
 actions:
   - !powerShell:

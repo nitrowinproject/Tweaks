@@ -1,5 +1,5 @@
 ---
-name: Use Local Time Servers
+title: Use Local Time Servers
 description: Makes use of local time servers instead of the default Windows ones for improved accuracy
 actions:
   - !powerShell:

@@ -1,5 +1,5 @@
 ---
-name: Hide Recommendations in the Start Menu
+title: Hide Recommendations in the Start Menu
 description: Hides the Recommended section from the Start Menu
 actions:
   - !registryValue:
