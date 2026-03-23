@@ -3,14 +3,5 @@ title: Add Recycle Bin to Home
 description: Adds Recycle Bin to Home in Explorer for QoL
 actions:
   - !powerShell:
-    command: |
-      $RBPath = 'HKCU:\Software\Classes\CLSID\{645FF040-5081-101B-9F08-00AA002F954E}\shell\pintohome\command\'
-      $name = "DelegateExecute"
-      $value = "{b455f46e-e4af-4035-b0a4-cf18d2f6f28e}"
-      New-Item -Path $RBPath -Force | Out-Null
-      New-ItemProperty -Path $RBPath -Name $name -Value $value -PropertyType String -Force | Out-Null
-      $oShell = New-Object -ComObject Shell.Application
-      $trash = $oShell.Namespace("shell:::{645FF040-5081-101B-9F08-00AA002F954E}")
-      $trash.Self.InvokeVerb("PinToHome")
-      Remove-Item -Path "HKCU:\Software\Classes\CLSID\{645FF040-5081-101B-9F08-00AA002F954E}" -Recurse
+    command: 'iex (irm "https://raw.githubusercontent.com/nitrowinproject/Tweaks/v3/Scripts/NitroWin/QoL/Explorer/Add-RecycleBinToHome.ps1")'
     runas: currentUser
