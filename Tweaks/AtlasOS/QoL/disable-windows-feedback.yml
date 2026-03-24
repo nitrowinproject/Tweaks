@@ -11,7 +11,8 @@ actions:
   - !registryValue:
     path: 'HKCU\SOFTWARE\Microsoft\Siuf\Rules'
     value: "PeriodInNanoSeconds"
-    operation: delete
+    data: "0"
+    type: REG_DWORD
 
   - !registryValue:
     path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection'
