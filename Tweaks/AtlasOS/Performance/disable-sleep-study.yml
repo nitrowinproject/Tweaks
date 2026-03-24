@@ -17,3 +17,4 @@ actions:
   - !scheduledTask:
     path: '\Microsoft\Windows\Power Efficiency Diagnostics\AnalyzeSystem'
     operation: disable
+    ignoreErrors: true
