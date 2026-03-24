@@ -1,9 +1,0 @@
----
-title: Disable Sticky Keys
-description: Disables Sticky Keys for QoL
-actions:
-  - !registryValue:
-    path: 'HKCU\Control Panel\Accessibility\StickyKeys'
-    value: "Flags"
-    data: "506"
-    type: REG_DWORD
