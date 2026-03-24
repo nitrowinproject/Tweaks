@@ -1,0 +1,9 @@
+---
+title: Disable AutoRun
+description: Disables AutoRun as it is potentially unsecure
+actions:
+  - !registryValue:
+    path: 'HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer'
+    value: "NoDriveTypeAutoRun"
+    data: "255"
+    type: REG_DWORD

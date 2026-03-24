@@ -1,0 +1,9 @@
+---
+title: Set System Time to UTC
+description: Sets System time to UTC for improved operating system compatibility
+actions:
+  - !registryValue:
+    path: 'HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation'
+    value: "RealTimeIsUniversal"
+    data: "1"
+    type: REG_DWORD

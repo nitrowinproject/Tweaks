@@ -1,0 +1,9 @@
+---
+title: Disable Visual Studio Telemetry
+description: Disables telemetry in Visual Studio 2026 (v18)
+actions:
+  - !registryValue:
+    path: 'HKLM\SOFTWARE\WOW6432Node\Microsoft\VSCommon\18.0\SQM'
+    value: "OptIn"
+    data: "0"
+    type: REG_DWORD
