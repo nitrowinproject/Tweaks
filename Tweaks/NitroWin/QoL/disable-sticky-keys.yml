@@ -5,5 +5,5 @@ actions:
   - !registryValue:
     path: 'HKCU\Control Panel\Accessibility\StickyKeys'
     value: "Flags"
-    data: "3a"
+    data: "506"
     type: REG_DWORD
