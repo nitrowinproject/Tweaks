@@ -3,19 +3,19 @@ title: Hide Recommendations in the Start Menu
 description: Hides the Recommended section from the Start Menu
 actions:
   - !registryValue:
-    path: 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PolicyManager\current\device\Start'
+    path: 'HKLM\SOFTWARE\Microsoft\PolicyManager\current\device\Start'
     value: "HideRecommendedSection"
     data: 1
     type: REG_DWORD
 
   - !registryValue:
-    path: 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PolicyManager\current\device\Education'
+    path: 'HKLM\SOFTWARE\Microsoft\PolicyManager\current\device\Education'
     value: "IsEducationEnvironment"
     data: 1
     type: REG_DWORD
 
   - !registryValue:
-    path: 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Explorer'
+    path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\Explorer'
     value: "HideRecommendedSection"
     data: 1
     type: REG_DWORD
