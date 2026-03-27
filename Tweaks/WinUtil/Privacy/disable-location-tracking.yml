@@ -1,0 +1,21 @@
+---
+title: Disable Location Tracking
+description: Disables location tracking
+actions:
+  - !registryValue:
+    path: 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Sensor\Overrides\{BFA794E4-F964-4FDB-90F6-51056BFE4B44}'
+    value: "SensorPermissionState"
+    data: "0"
+    type: REG_DWORD
+
+  - !registryValue:
+    path: 'HKLM\SYSTEM\CurrentControlSet\Services\lfsvc\Service\Configuration'
+    value: "Status"
+    data: "0"
+    type: REG_DWORD
+
+  - !registryValue:
+    path: 'HKLM\SYSTEM\Maps'
+    value: "AutoUpdateEnabled"
+    data: "0"
+    type: REG_DWORD

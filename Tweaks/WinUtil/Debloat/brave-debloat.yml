@@ -1,0 +1,33 @@
+---
+title: Brave Debloat
+description: Disables various annoyances like Brave Rewards, Leo AI, Crypto Wallet and VPN
+actions:
+  - !registryValue:
+    path: 'HKLM\SOFTWARE\Policies\BraveSoftware\Brave'
+    value: "BraveRewardsDisabled"
+    data: "1"
+    type: REG_DWORD
+
+  - !registryValue:
+    path: 'HKLM\SOFTWARE\Policies\BraveSoftware\Brave'
+    value: "BraveWalletDisabled"
+    data: "1"
+    type: REG_DWORD
+
+  - !registryValue:
+    path: 'HKLM\SOFTWARE\Policies\BraveSoftware\Brave'
+    value: "BraveVPNDisabled"
+    data: "1"
+    type: REG_DWORD
+
+  - !registryValue:
+    path: 'HKLM\SOFTWARE\Policies\BraveSoftware\Brave'
+    value: "BraveAIChatEnabled"
+    data: "0"
+    type: REG_DWORD
+
+  - !registryValue:
+    path: 'HKLM\SOFTWARE\Policies\BraveSoftware\Brave'
+    value: "BraveStatsPingEnabled"
+    data: "0"
+    type: REG_DWORD

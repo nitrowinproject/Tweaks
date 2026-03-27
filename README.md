@@ -21,3 +21,5 @@ All tweaks were designed for Windows 11. While they should be compatible with Wi
 The tweaks from NitroWin are licensed under the [Zero-Clause BSD License](LICENSE).
 
 The tweaks from AtlasOS are licensed under [GPL-3.0](https://github.com/Atlas-OS/Atlas/blob/main/LICENSE).
+
+The tweaks from WinUtil are licensed under the [MIT License](https://github.com/ChrisTitusTech/winutil/blob/main/LICENSE).

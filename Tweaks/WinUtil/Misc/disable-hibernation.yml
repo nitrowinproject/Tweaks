@@ -1,0 +1,25 @@
+---
+title: Disable Hibernation
+description: Disables Hibernation on desktop PCs
+actions:
+  - !registryValue:
+    path: 'HKLM\System\CurrentControlSet\Control\Session Manager\Power'
+    value: "HibernateEnabled"
+    data: "0"
+    type: REG_DWORD
+    platforms:
+      mobile: false
+
+  - !registryValue:
+    path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FlyoutMenuSettings'
+    value: "ShowHibernateOption"
+    data: "0"
+    type: REG_DWORD
+    platforms:
+      mobile: false
+
+  - !run:
+    exe: "powercfg.exe"
+    args: "/hibernate off"
+    platforms:
+      mobile: false

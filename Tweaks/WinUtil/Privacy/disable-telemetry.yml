@@ -1,0 +1,10 @@
+---
+title: Disable Telemetry
+description: Disables Microsoft telemetry
+actions:
+  - !service:
+    name: "DiagTrack"
+    operation: disable
+
+  - !powerShell:
+    command: "Set-MpPreference -SubmitSamplesConsent 2"
