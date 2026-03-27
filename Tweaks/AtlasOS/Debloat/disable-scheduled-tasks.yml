@@ -41,3 +41,4 @@ actions:
     path: 'HKLM\System\CurrentControlSet\Control\Ubpm'
     value: "CriticalMaintenance_UsageDataReporting" # Remove from automatic maintenance
     operation: delete
+    runas: trustedInstaller
