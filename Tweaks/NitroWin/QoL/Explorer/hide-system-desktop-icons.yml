@@ -1,0 +1,33 @@
+---
+title: Hide System Desktop Icons
+description: Hides the system desktop icons (such as the Recycle Bin or This PC)
+actions:
+  - !registryValue:
+    path: 'HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel'
+    value: "{20D04FE0-3AEA-1069-A2D8-08002B30309D}"
+    data: "1"
+    type: REG_DWORD
+
+  - !registryValue:
+    path: 'HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel'
+    value: "{5399E694-6CE5-4D6C-8FCE-1D8870FDCBA0}"
+    data: "1"
+    type: REG_DWORD
+
+  - !registryValue:
+    path: 'HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel'
+    value: "{59031a47-3f72-44a7-89c5-5595fe6b30ee}"
+    data: "1"
+    type: REG_DWORD
+
+  - !registryValue:
+    path: 'HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel'
+    value: "{645FF040-5081-101B-9F08-00AA002F954E}"
+    data: "1"
+    type: REG_DWORD
+
+  - !registryValue:
+    path: 'HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel'
+    value: "{F02C1A0D-BE21-4350-88B0-7367FC96EF3C}"
+    data: "1"
+    type: REG_DWORD

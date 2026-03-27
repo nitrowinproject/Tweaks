@@ -1,0 +1,9 @@
+---
+title: Enable Numlock
+description: Enables Numlock for all users and the login screen
+actions:
+  - !registryValue:
+    path: 'HKU\.DEFAULT\Control Panel\Keyboard'
+    value: "InitialKeyboardIndicators"
+    data: "2"
+    type: REG_SZ
