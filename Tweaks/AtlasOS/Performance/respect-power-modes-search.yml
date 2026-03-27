@@ -7,3 +7,4 @@ actions:
     value: "RespectPowerModes"
     data: "1"
     type: REG_DWORD
+    runas: trustedInstaller

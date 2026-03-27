@@ -49,6 +49,7 @@ actions:
     value: "DisableWerReporting"
     data: "1"
     type: REG_DWORD
+    runas: trustedInstaller
 
   - !registryValue:
     path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\DeviceInstall\Settings'

@@ -14,4 +14,3 @@ actions:
               $o.Namespace($path).Self.InvokeVerb('pintohome')
           }
       }
-    runas: currentUser
