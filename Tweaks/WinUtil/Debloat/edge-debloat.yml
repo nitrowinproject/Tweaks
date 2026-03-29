@@ -15,12 +15,6 @@ actions:
     type: REG_DWORD
 
   - !registryValue:
-    path: 'HKLM\SOFTWARE\Policies\Microsoft\Edge'
-    value: "PersonalizationReportingEnabled"
-    data: "0"
-    type: REG_DWORD
-
-  - !registryValue:
     path: 'HKLM\SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist'
     value: "1"
     data: "ofefcgjbeghpigppfmkologfjadafddi"
