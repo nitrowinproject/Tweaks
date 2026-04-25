@@ -1,0 +1,51 @@
+---
+title: Disable Automatic Driver Installation
+description: Excludes drivers from Windows Update
+actions:
+  - !registryValue:
+    path: 'HKLM\SOFTWARE\Microsoft\PolicyManager\current\device\Update'
+    value: "ExcludeWUDriversInQualityUpdate"
+    data: "1"
+    type: REG_DWORD
+
+  - !registryValue:
+    path: 'HKLM\SOFTWARE\Microsoft\PolicyManager\default\Update'
+    value: "ExcludeWUDriversInQualityUpdate"
+    data: "1"
+    type: REG_DWORD
+
+  - !registryValue:
+    path: 'HKLM\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings'
+    value: "ExcludeWUDriversInQualityUpdate"
+    data: "1"
+    type: REG_DWORD
+
+  - !registryValue:
+    path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate'
+    value: "ExcludeWUDriversInQualityUpdate"
+    data: "1"
+    type: REG_DWORD
+
+  - !registryValue:
+    path: 'HKLM\SOFTWARE\Microsoft\PolicyManager\default\Update\ExcludeWUDriversInQualityUpdate'
+    value: "value"
+    data: "1"
+    type: REG_DWORD
+
+  - !registryValue:
+    path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Device Metadata'
+    value: "PreventDeviceMetadataFromNetwork"
+    data: "1"
+    type: REG_DWORD
+
+  - !registryValue:
+    path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\DriverSearching'
+    value: "SearchOrderConfig"
+    data: "0"
+    type: REG_DWORD
+
+  - !registryValue:
+    path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\DriverSearching'
+    value: "DontSearchWindowsUpdate"
+    data: "1"
+    type: REG_DWORD

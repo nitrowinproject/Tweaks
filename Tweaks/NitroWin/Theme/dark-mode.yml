@@ -1,0 +1,15 @@
+---
+title: Enable Dark Mode
+description: Enables the dark theme
+actions:
+  - !registryValue:
+    path: 'HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize'
+    value: "AppsUseLightTheme"
+    data: "0"
+    type: REG_DWORD
+
+  - !registryValue:
+    path: 'HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize'
+    value: "SystemUsesLightTheme"
+    data: "0"
+    type: REG_DWORD

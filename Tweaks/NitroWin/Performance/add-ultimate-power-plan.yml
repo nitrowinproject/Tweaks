@@ -1,0 +1,6 @@
+---
+title: Add Ultimate Power Plan
+description: Adds the Ultimate Power Plan if not already installed
+actions:
+  - !powerShell:
+    command: 'iex (irm "https://raw.githubusercontent.com/nitrowinproject/Tweaks/v3/Scripts/NitroWin/Performance/Add-UltimatePowerPlan.ps1")'

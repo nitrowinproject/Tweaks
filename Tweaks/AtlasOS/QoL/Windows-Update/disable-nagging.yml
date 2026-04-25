@@ -1,0 +1,15 @@
+---
+title: Disable WU Nagging
+description: Disables Windows Update from nagging you in any way possible, e.g. about restarting your computer
+actions:
+  - !registryValue:
+    path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU'
+    value: "NoAUAsDefaultShutdownOption"
+    data: "1"
+    type: REG_DWORD
+
+  - !registryValue:
+    path: 'HKLM\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings'
+    value: "HideMCTLink"
+    data: "1"
+    type: REG_DWORD

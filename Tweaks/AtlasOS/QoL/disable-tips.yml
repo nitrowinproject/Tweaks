@@ -1,0 +1,9 @@
+---
+title: Disable Tips
+description: Disables tips for QoL and privacy
+actions:
+  - !registryValue:
+    path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\CloudContent'
+    value: "DisableSoftLanding"
+    data: "1"
+    type: REG_DWORD

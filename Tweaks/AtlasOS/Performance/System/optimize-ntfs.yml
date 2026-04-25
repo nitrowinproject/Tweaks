@@ -1,0 +1,11 @@
+---
+title: Optimize NTFS
+description: Optimizes NTFS options for optimal QoL, performance and privacy
+actions:
+  - !run:
+    exe: "fsutil.exe"
+    args: "behavior set disablelastaccess 1"
+
+  - !run:
+    exe: "fsutil.exe"
+    args: "8dot3name set 1"

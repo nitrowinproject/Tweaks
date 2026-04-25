@@ -1,0 +1,9 @@
+---
+title: Blocks Anonymous Enumeration of SAM Accounts
+description: Blocks the anonymous enumeration of SAM accounts to prevent the ability to list the potential points of attack to the system
+actions:
+  - !registryValue:
+    path: 'HKLM\SYSTEM\CurrentControlSet\Control\Lsa'
+    value: "RestrictAnonymousSAM"
+    data: "1"
+    type: REG_DWORD

@@ -1,0 +1,9 @@
+---
+title: Disable Consumer Features
+description: Makes Windows not install any games or third-party apps
+actions:
+  - !registryValue:
+    path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\CloudContent'
+    value: "DisableWindowsConsumerFeatures"
+    data: "1"
+    type: REG_DWORD

@@ -1,0 +1,47 @@
+---
+title: Set Services to Manual
+description: Sets some services to manual startup as they do not need to be running all of the time
+actions:
+  - !service:
+    name: "AssignedAccessManagerSvc"
+    operation: disable
+
+  - !service:
+    name: "BITS"
+    operation: makeDelayed
+
+  - !service:
+    name: "CDPSvc"
+    operation: makeManual
+
+  - !service:
+    name: "InventorySvc"
+    operation: makeManual
+
+  - !service:
+    name: "MapsBroker"
+    operation: makeDelayed
+
+  - !service:
+    name: "PcaSvc"
+    operation: makeManual
+
+  - !service:
+    name: "StorSvc"
+    operation: makeManual
+
+  - !service:
+    name: "WSAIFabricSvc"
+    operation: makeManual
+
+  - !service:
+    name: "WpnService"
+    operation: makeManual
+
+  - !service:
+    name: "camsvc"
+    operation: makeManual
+
+  - !service:
+    name: "edgeupdate"
+    operation: makeManual

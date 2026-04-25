@@ -1,0 +1,9 @@
+---
+title: Disable Fast Startup
+description: Disables Fast Startup which can cause corrupted system files
+actions:
+  - !registryValue:
+    path: 'HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Power'
+    value: "HiberbootEnabled"
+    data: "0"
+    type: REG_DWORD

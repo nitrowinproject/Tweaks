@@ -1,0 +1,9 @@
+---
+title: Restrict Anonymous Access
+description: Restricts anonymous access to named pipes and shares to prevent unauthorized system access
+actions:
+  - !registryValue:
+    path: 'HKLM\SYSTEM\CurrentControlSet\Services\LanManServer\Parameters'
+    value: "RestrictNullSessAccess"
+    data: "1"
+    type: REG_DWORD

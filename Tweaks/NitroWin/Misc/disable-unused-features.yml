@@ -1,0 +1,9 @@
+---
+title: Disable Unused Features
+description: Disables unused features that not a lof of people use
+actions:
+  - !powerShell:
+    command: 'Disable-WindowsOptionalFeature -FeatureName "WorkFolders-Client" -NoRestart -Online'
+
+  - !powerShell:
+    command: 'Disable-WindowsOptionalFeature -FeatureName "Printing-PrintToPDFServices-Features" -NoRestart -Online'

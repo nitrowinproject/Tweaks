@@ -1,0 +1,7 @@
+---
+title: Disable Windows Search Indexing
+description: Disables Windows Search indexing to save on I/O operations
+actions:
+  - !service:
+    name: "WSearch"
+    operation: disable

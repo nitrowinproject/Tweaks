@@ -1,0 +1,9 @@
+---
+title: Show Settings in Start Menu
+description: Shows the Settings folder in the Start Menu
+actions:
+  - !registryValue:
+    path: 'HKLM\SOFTWARE\Microsoft\PolicyManager\current\device\Start'
+    value: "AllowPinnedFolderSettings"
+    data: "1"
+    type: REG_DWORD

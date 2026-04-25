@@ -1,0 +1,7 @@
+---
+title: Disable Avalonia Telemetry
+description: Disables telemetry when building Avalonia applications for privacy
+actions:
+  - !run:
+    exe: "setx.exe"
+    args: "/M AVALONIA_TELEMETRY_OPTOUT 1"
