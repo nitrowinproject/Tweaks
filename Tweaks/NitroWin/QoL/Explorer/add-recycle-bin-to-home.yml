@@ -3,4 +3,4 @@ title: Add Recycle Bin to Home
 description: Adds Recycle Bin to Home in Explorer for QoL
 actions:
   - !powerShell:
-    command: 'iex (irm "https://raw.githubusercontent.com/nitrowinproject/Tweaks/v3/Scripts/NitroWin/QoL/Explorer/Add-RecycleBinToHome.ps1")'
+    command: 'iex (irm "https://raw.githubusercontent.com/nitrowinproject/Tweaks/main/Scripts/NitroWin/QoL/Explorer/Add-RecycleBinToHome.ps1")'

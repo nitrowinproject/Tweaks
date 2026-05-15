@@ -3,4 +3,4 @@ title: Use Local Time Servers
 description: Makes use of local time servers instead of the default Windows ones for improved accuracy
 actions:
   - !powerShell:
-    command: 'iex (irm "https://raw.githubusercontent.com/nitrowinproject/Tweaks/v3/Scripts/NitroWin/Misc/Set-LocalTimeServers.ps1")'
+    command: 'iex (irm "https://raw.githubusercontent.com/nitrowinproject/Tweaks/main/Scripts/NitroWin/Misc/Set-LocalTimeServers.ps1")'
