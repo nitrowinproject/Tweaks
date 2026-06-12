@@ -4,6 +4,8 @@ description: Disables unused features that not a lof of people use
 actions:
   - !powerShell:
     command: 'Disable-WindowsOptionalFeature -FeatureName "WorkFolders-Client" -NoRestart -Online'
+    timeout: 120
 
   - !powerShell:
     command: 'Disable-WindowsOptionalFeature -FeatureName "Printing-PrintToPDFServices-Features" -NoRestart -Online'
+    timeout: 120
