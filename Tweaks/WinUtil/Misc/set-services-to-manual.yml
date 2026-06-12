@@ -20,7 +20,7 @@ actions:
 
   - !service:
     name: "MapsBroker"
-    operation: makeDelayed
+    operation: makeManual
 
   - !service:
     name: "PcaSvc"
@@ -45,3 +45,11 @@ actions:
   - !service:
     name: "edgeupdate"
     operation: makeManual
+
+  - !service:
+    name: "SharedAccess"
+    operation: disable
+
+  - !service:
+    name: "CscService"
+    operation: disable

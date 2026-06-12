@@ -1,6 +1,6 @@
 ---
 title: Num Lock on Startup
-description: Toggle the Num Lock key state when your computer starts
+description: Toggles the Num Lock key state when your computer starts
 actions:
   - !registryValue:
     path: 'HKU\.DEFAULT\Control Panel\Keyboard'

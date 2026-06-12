@@ -8,3 +8,7 @@ actions:
 
   - !powerShell:
     command: "Set-MpPreference -SubmitSamplesConsent 2"
+
+  - !service:
+    name: "wermgr"
+    operation: disable

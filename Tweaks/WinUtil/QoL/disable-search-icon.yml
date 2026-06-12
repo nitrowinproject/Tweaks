@@ -1,0 +1,9 @@
+---
+title: Disable Taskbar Search Icon
+description: Disables the Search Button on the Taskbar
+actions:
+  - !registryValue:
+    path: 'HKCU\Software\Microsoft\Windows\CurrentVersion\Search'
+    value: "SearchboxTaskbarMode"
+    data: "0"
+    type: REG_DWORD

@@ -1,0 +1,15 @@
+---
+title: Enable Game Mode
+description: Enables Windows prioritizing gaming performance by allocating system resources to games
+actions:
+  - !registryValue:
+    path: 'HKCU\Software\Microsoft\GameBar'
+    value: "AllowAutoGameMode"
+    data: "1"
+    type: REG_DWORD
+
+  - !registryValue:
+    path: 'HKCU\Software\Microsoft\GameBar'
+    value: "AutoGameModeEnabled"
+    data: "1"
+    type: REG_DWORD
