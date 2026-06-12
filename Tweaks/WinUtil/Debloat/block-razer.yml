@@ -1,0 +1,9 @@
+---
+title: Disable Razer Software Auto-Install
+description: Blocks ALL Razer Software installations
+actions:
+  - !registryValue:
+    path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Device Installer'
+    value: "DisableCoInstallers"
+    data: "1"
+    type: REG_DWORD
