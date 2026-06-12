@@ -10,7 +10,7 @@ The default collection of tweaks to debloat and optimize Windows that is used by
 ## :book: Compatibility
 
 > [!CAUTION]
-> Either a Pro or an Enterprise version of Windows is required, as other versions do not support Group Policies.
+> Either a Pro or an Enterprise version of Windows is required, as other versions do not support Group Policies. Windows 11 IoT Enterprise LTSC 2024 is recommended.
 
 All tweaks are compatible with NitroWin. Although the format is practically the same, it is probably not compatible with AME products.
 
