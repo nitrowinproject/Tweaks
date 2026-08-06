@@ -1,0 +1,51 @@
+---
+title: Disable Game Bar when Connecting a Controller
+description: Removes Game Bar protocol handlers to fix the annoying popup asking you to reinstall Game Bar
+actions:
+  - !registryValue:
+    path: 'HKCR\ms-gamebar'
+    value: ""
+    data: "URL:ms-gamebar"
+    type: REG_SZ
+
+  - !registryValue:
+    path: 'HKCR\ms-gamebar'
+    value: "URL Protocol"
+    data: ""
+    type: REG_SZ
+
+  - !registryValue:
+    path: 'HKCR\ms-gamebar'
+    value: "NoOpenWith"
+    data: ""
+    type: REG_SZ
+
+  - !registryValue:
+    path: 'HKCR\ms-gamebar\shell\open\command'
+    value: ""
+    data: '"%SystemRoot%\System32\systray.exe"'
+    type: REG_SZ
+
+  - !registryValue:
+    path: 'HKCR\ms-gamebarservices'
+    value: ""
+    data: "URL:ms-gamebarservices"
+    type: REG_SZ
+
+  - !registryValue:
+    path: 'HKCR\ms-gamebarservices'
+    value: "URL Protocol"
+    data: ""
+    type: REG_SZ
+
+  - !registryValue:
+    path: 'HKCR\ms-gamebarservices'
+    value: "NoOpenWith"
+    data: ""
+    type: REG_SZ
+
+  - !registryValue:
+    path: 'HKCR\ms-gamebarservices\shell\open\command'
+    value: ""
+    data: '"%SystemRoot%\System32\systray.exe"'
+    type: REG_SZ
